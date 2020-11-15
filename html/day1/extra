@@ -1,0 +1,2 @@
+inline element > tag than appear in same line (a,span)
+block level element > tag that start from new line (h1,div,p)
