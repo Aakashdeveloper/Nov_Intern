@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Edureka</title>
+        <!--Favicon-->
+        <link href="edureka.png" rel="icon" />
+        <style>
+            a{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+            }
+            .fb{
+                
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>React App</h1> 
+            <div style="text-align: center;">
+                <a style="color:navy;text-decoration:none;" href="https://www.facebook.com/" target="_blank">LinkedIn</a>
+                <a style="color:blue;text-decoration:none;" href="https://www.facebook.com/" target="_blank">Facebook</a>
+                <a style="color:red;text-decoration:none;" href="https://www.youtube.com/developerfunnel" target="_blank">YouTube</a>
+            </div>
+        </header>
+        <hr/>
+        <div>
+            <div>
+                <img src="food-wallpaper.png" alt="wallpaper" height="500" width="1400"/>
+            </div>
+            <div>
+                <select>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Chandigarh</option>
+                </select>
+                <select>
+                    <option>Rest 1</option>
+                    <option>Rest 2</option>
+                    <option>Rest 3</option>
+                </select>
+            </div>
+        </div>
+        <hr/>
+        <footer style="text-align: center;">
+            <h1>Edureka</h1>
+            <h3>&copy; Edureka  Developed with &hearts; &quaternions; &Pi; &dollar;</h3>
+            <a style="color:navy;text-decoration:none;" href="https://www.facebook.com/" target="_blank">
+                LinkedIn
+            </a>
+            <a style="color:blue;text-decoration:none;" 
+            href="https://www.facebook.com/" target="_blank">
+                Facebook
+            </a>
+            <a style="color:red;text-decoration:none;" href="https://www.youtube.com/developerfunnel" target="_blank">YouTube</a>
+        </footer>
+    </body>
+</html>

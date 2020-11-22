@@ -1,0 +1,69 @@
+.first{
+    border: 2px solid black;
+    height:250px;
+    width:22%;
+    float: left;
+    margin-left: 2%;
+    text-align: center;
+}
+
+.second{
+    margin-top: 2%; 
+}
+
+
+@media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+    .first{
+        width:44%;
+        margin-top: 2%; 
+    }
+  }
+
+@media screen and (min-width: 880px) {
+    body {
+      background-color: indianred;
+    }
+    .first{
+        width:22%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+      background-color: white;
+    }
+    .first{
+        width:22%;
+    }
+}
+
+body{
+    margin: auto;
+}
+
+#header{
+    width:100%;
+    height:50px;
+    background-color: red;
+}
+
+span{
+    font-size:30px;
+}
+
+#filter{
+    height:1000px;
+    width:20%;
+    background-color:darkcyan;
+    float: left;
+    border:5px double black;
+    margin-top: 2%; 
+    margin-left: 2%; 
+}
+
+#item{
+    width:70%;
+}

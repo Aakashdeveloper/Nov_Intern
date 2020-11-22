@@ -1,0 +1,28 @@
+.fb{
+    color:#4267b2;
+    text-decoration:none
+}
+.myfont{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.yt{
+    color:#FF0000;
+    text-decoration:none;
+}
+.linkin{
+    color:#0F89AD;
+    text-decoration:none;
+}
+#heading{
+    text-align: center;
+    color:teal;
+}
+
+
+#test{
+    height:500px;
+    width:500px;
+    background: url('https://i.ibb.co/jTLzqjZ/food-wallpaper.png');
+    border-radius: 50%;
+}
