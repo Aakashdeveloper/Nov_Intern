@@ -1,0 +1,30 @@
+.divblock{
+    height:200px;
+   
+}
+
+#red{
+    background-color: red;
+}
+
+#teal{
+    background-color: teal;
+}
+
+#blue{
+    background-color: skyblue;
+}
+
+#tomato{
+    background-color: tomato;
+}
+
+.btn-olive{
+    background:olive;
+    color:white
+}
+
+.btn-olive:hover{
+    background:rgb(184, 184, 8);
+    color:white
+}

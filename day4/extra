@@ -1,0 +1,25 @@
+is css framework that help to make website responsive.
+bootstrap 3 and bootstrap 4
+
+bootstrap3>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
+
+grid 12
+col-xs
+col-md 
+col-sm 
+col-lg
+
+
+primary > blue
+success > green
+warning > orange
+danger  > red
+info    > skyblue
+
+https://getbootstrap.com/docs/3.3/components/
