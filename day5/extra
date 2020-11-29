@@ -1,0 +1,41 @@
+panels
+forms
+modal
+carousel
+
+Bootstrap4
+diff 
+new things
+
+github
+
+//Bootstrap3
+col-xs-2
+col-sm-2
+col-md-2
+col-lg-2
+
+//Bootstrap4
+col-2   > 576
+col-sm-2 <576
+col-md-2 <768
+col-lg-2 <992
+col-xl-2  <1200
+
+>>>>First time<<<<<<<<
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/winter-fullsatck.git
+git push -u origin master
+
+>>>>Next all time<<<<<<<<
+git add .
+git commit -m "first commit"
+git push
+
+
+git clone https://github.com/Aakashdeveloper/winter-fullsatck
+git add .
+git commit -m "first commit"
+git push -u origin master
