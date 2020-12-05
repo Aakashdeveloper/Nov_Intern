@@ -1,0 +1,61 @@
+.first{
+    border: 2px solid black;
+    height:300px;
+    width:70%;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%; 
+}
+
+.second{
+    margin-top: 2%; 
+}
+
+
+body{
+    margin: auto;
+}
+
+#header{
+    width:100%;
+    height:50px;
+    background-color: red;
+}
+
+span{
+    font-size:30px;
+}
+
+#filter{
+    height:1000px;
+    width:20%;
+    background-color:darkcyan;
+    float: left;
+    border:5px double black;
+    margin-top: 2%; 
+    margin-left: 2%; 
+}
+
+#item{
+    width:70%;
+}
+
+.image{
+    width:30%;
+    height:100%;
+    float: left;
+}
+.details{
+    width:100%;
+    height:100%;
+}
+
+.maindiv{
+    width:100%;
+    height:60%;
+}
+
+.moredetails{
+    width:100%;
+    height:30%;
+}
