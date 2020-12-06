@@ -1,0 +1,7 @@
+you have to make luck game
+> you have to take input for user between 1 to 20
+> you will generate one random number between 1 to 20
+you have to compare userinput and random number
+total there are 3 change
+if user win 2 time than win 
+if win 1 time and loose 2 time than loose 
