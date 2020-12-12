@@ -15,6 +15,7 @@ switch(new Date().getDay()){
 
 
 var name = "Eva"
+
 switch(name){
     case 'Aakash':
         console.log("Its user");
