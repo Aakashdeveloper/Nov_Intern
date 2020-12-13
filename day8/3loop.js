@@ -95,7 +95,7 @@ while(i<city.length){
 ////for of
 var city = ["London","NewYork","Delhi","Amsterdam"]
 
-for(mycity of city){
+for(let mycity of city){
     console.log(mycity)
 }
 
@@ -109,3 +109,4 @@ for(mycity of city){
         console.log(mycity)
     }
 }
+

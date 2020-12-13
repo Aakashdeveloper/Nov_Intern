@@ -2,19 +2,21 @@ let/const
 regex
 loop
 function
+object
+Json
+DOM
+html+javascript
 ///////////////
-
 map
 filter
 clouser
 currying function
 hoisting
-object
-Json
 transpile
 import export
 
-DOM
-html+javascript
+
 
 https://nodejs.org/en/
+
+http://api.openweathermap.org/data/2.5/forecast/daily?q=davos&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29

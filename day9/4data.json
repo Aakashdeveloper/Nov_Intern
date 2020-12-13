@@ -1,0 +1,30 @@
+JavaScript Object Notation
+key value pair
+
+var city = [
+    {
+        "id":1,
+        "name":"Delhi",
+        "country":"India",
+        "pincode":[{"id":1,"code":24235}]
+    },
+    {
+        "id":2,
+        "name":"Amsterdam",
+        "country":"Netherlands"
+    },
+    {
+        "id":3,
+        "name":"London",
+        "country":"England"
+    },
+    {
+        "id":4,
+        "name":"Helsinki",
+        "country":"Finland"
+    }
+]
+
+for(i=0;i<city.length;i++){
+    console.log(city[i].name)
+}

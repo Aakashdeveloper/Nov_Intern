@@ -34,4 +34,26 @@ function isEven(userInput){
 isEven(10)
 "Number 10 is even"
 isEven(9)
-"Number 9 is odd"
+"Number 9 is odd";
+
+///////////////
+method
+/////
+function add(a,b){
+    return a+b
+}
+
+let add = function(a,b){
+    return a+b
+}
+
+add(1,2)
+3
+
+////////
+arrow> Es6 
+//////
+
+let add = (a,b) => {return a+b}
+
+add(1,2)
