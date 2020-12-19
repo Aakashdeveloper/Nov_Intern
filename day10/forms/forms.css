@@ -1,0 +1,13 @@
+p{
+    color:red
+}
+
+#ppout{
+    height:10px;
+    width:100%;
+    visibility: hidden;
+}
+
+#sout{
+    color:green
+}

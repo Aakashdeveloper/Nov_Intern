@@ -16,6 +16,8 @@ transpile
 import export
 
 
+Math.random().toString(26).substring(7)
+
 
 https://nodejs.org/en/
 

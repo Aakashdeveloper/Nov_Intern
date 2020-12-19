@@ -15,13 +15,18 @@ document.getElementsByClassName('scroll')[0]="Tech"
 "Tech"
 document.getElementsByTagName('ul')
 HTMLCollection [ul.nav.navbar]0: ul.nav.navbarlength: 1__proto__: HTMLCollection
+
+
 var list = document.getElementsByTagName('ul')[0]
-undefined
+
 var newitem = document.createElement('li')
-undefined
+
 var data = "myoption"
-undefined
-newitem.append(data)
-undefined
+
+newitem.append(data)  ====> <li>​myoption​</li>​
+
 list.appendChild(newitem)
+
+<ul>
 <li>​myoption​</li>​
+</ul>

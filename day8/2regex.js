@@ -41,15 +41,11 @@ a.match(/h.t/g)
 
 var a = "i got 50%"
 a.match(/\w/g)
-
-
-var a = "hot and hat cat bat hoot h1t h$t"
-a.match(/h\w+t/g)
+"i got 50"
 
 var a = "hot and hat cat bat hoot h1t h$t"
 a.match(/h\w+t/g)
+hot hat hoot h1t
 
-var a = 10
-var b = 20
-var out = a+b
-console.log(`sum is ${a+b}`)
+a.match(/h\W+t/g)
+h$t

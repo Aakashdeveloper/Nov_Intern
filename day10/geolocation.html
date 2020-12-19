@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onClick="getgeo()">
+            Get Geo
+        </button>
+        <p id="out"></p>
+        <script>
+            var x = document.getElementById('out');
+            function getgeo(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showposition)
+                }else{
+                    x.innerText ="Geo Not Supported"
+                }
+            }
+
+            function showposition(data){
+                x.innerText=`latitude is ${data.coords.latitude} & longitude is ${data.coords.longitude} `
+            }
+        </script>
+    </body>
+</html>
+
