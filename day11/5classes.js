@@ -23,3 +23,15 @@ class language{
         return `Say Hi`
     }
 }
+
+
+class Database{
+    find=(table)=>{return `Select * from ${table}`}
+    insert=(table,data)=> {return `Insert into ${table} name,city values (${data.name},${data.city})`}
+}
+
+export default Database
+
+var mydb = new Database();
+var query = mydb.insert('student',{'name':'John','city':'Delhi'})
+"Insert into student name,city values (John,Delhi)"

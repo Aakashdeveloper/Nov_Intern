@@ -14,6 +14,7 @@ function sub(){
     var out =`Sub of number is ${ Number(a)-Number(b)}`;
     document.getElementById('output').innerText = out
 }
+
 const calc = (opt) => {
     var a = document.getElementById('first').value;
     var b = document.getElementById('second').value;

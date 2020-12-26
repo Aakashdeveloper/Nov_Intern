@@ -1,0 +1,22 @@
+{
+  "name": "mynodeapp",
+  "version": "1.0.0",
+  "description": "this is node js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "developerfunnel"
+  ],
+  "author": "Edureka",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}

@@ -1,0 +1,63 @@
+What is nodeJs
+
+Backend framework of javascript
+Help to build api
+
+Single Thread, non blocking , async I/O 
+
+NPM > node package manager
+
+>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<
+package.json
+> entry point to application
+> name of application
+> version of application
+> description
+> author
+> lisence 
+> scripts(start,stop,build,test)
+> packages/dependency 
+
+/////////////////////
+Step to generate package.json
+/////////////////////
+**NodeJs must be installed in system
+> navigate to folder where you want to generate using cmd /terminal
+> npm init
+> answer all question
+> type "yes"
+
+>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<
+local dependency >  for application development
+dev dependency > user for time of testing
+global dependency > use to create application & run
+
+
+/////////////////////
+Step to install local dependency
+///////////////////
+** NodeJs must be install in system
+> got inside folder where you want to install
+> npm i packagename
+
+/////////////////////
+Step to install dev dependency
+///////////////////
+** nodeJs must be install in system
+> got inside folder where you want to install
+> npm i packagename --save-dev
+
+/////////////////////
+Step to install global dependency
+///////////////////
+#window
+> open cmd as admin
+> npm i -g packagename
+
+#linux
+> open terminal
+> sudo npm i -g packagename
+
+> any dependency added will not added in package.json
+> it need admin permission
+> it install in system directly 
