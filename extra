@@ -21,4 +21,9 @@ Math.random().toString(26).substring(7)
 
 https://nodejs.org/en/
 
-http://api.openweathermap.org/data/2.5/forecast/daily?q=davos&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29
+CD > continous Development
+nodemon >>>>install global
+> npm i -g nodemon 
+> whenever you make any change in code it will restart my application
+
+> npm run dev 

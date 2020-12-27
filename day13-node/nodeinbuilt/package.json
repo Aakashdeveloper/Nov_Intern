@@ -1,0 +1,15 @@
+{
+  "name": "staticapi",
+  "version": "1.0.0",
+  "description": "this is about static api",
+  "main": "fs.js",
+  "scripts": {
+    "start":"node static.js",
+    "dev":"nodemon static.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "developerfunnel",
+  "license": "ISC"
+}
