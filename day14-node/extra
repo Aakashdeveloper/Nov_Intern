@@ -1,0 +1,139 @@
+crud
+c => create     > post (insert)
+r => read       > get    
+u => update     > put
+d => delete     > delete
+
+
+
+Database => storage
+           where we save the data 
+
+Mysql(sql,oracle,postgres)
+
+Mongo > no sql
+> fast 
+> can save huge amount of data
+
+
+Mysql > table
+
+sno | Hindi |English | Computer
+ 1  |   80  |        |
+ 2  |       |   80   |
+ 3  |  80   |        |     80
+
+MySql      Mongo
+database   database
+table      collections
+row        documents
+
+In Database we have table, in table we have row
+In Database we have collections, in collections we have documents
+
+var students =[
+    {
+        sno:1,
+        hindi:80
+    },
+    {
+        sno:2,
+        english:80
+    },
+    {
+        sno:3,
+        hindi:80
+        Computer:80
+    }
+]
+
+
+
+MySql use>
+in case same structure of data
+ATM  Slip
+when data is structure
+
+
+MongoDb use>
+When data is big and can be structure or unstructured
+
+//////////
+How to use MongoDb
+> Online  > mongodb atlas 
+
+> Offline > local server |  port > 27017
+///////////////////////
+
+How to setup mongodb
+> download mongodb server > https://www.mongodb.com/try/download/community
+
+#window 
+> install mongodb
+> in c drive make one folder by the name of data
+> in data folder make new folder by the of db 
+    (C:/data/db)
+
+> To Start mongodb we need to start mongo server 
+    > open cmd 
+        > go inside c:/programfile/mongodb/server/4.4/bin/
+             cd c:/programfile/mongodb/server/4.4/bin/
+        (go inside bin folder using cmd)
+        > type mongod 
+            (it will start mongodb server on port 27017)
+
+> Start mongodb console (to test mongo command)
+    >open cmd 
+    >go inside c:/programfile/mongodb/server/4.4/bin/
+             cd c:/programfile/mongodb/server/4.4/bin/
+        (go inside bin folder using cmd)
+    > type mongo
+        (it will start mongodb console)
+
+
+#Mac
+> open terminal
+> go to root ~
+> mkdir data/db
+
+> To Start mongodb we need to start mongo server 
+    > open terminal
+    > mongod --dbpath data/db
+
+> Start mongodb console (to test mongo command)
+    > open terminal
+    > type mongo
+
+
+>>>>>>>><<<<<<<<
+How to create database
+
+> every command you have to run from mongo console
+
+> use databasename
+
+# Collection will create when we insert first record
+
+> db.collectionname.insert({_id:1,name:'John'})
+
+> db.first.insert({_id:1,name:'John'})
+
+>>>To See all databases<<<<<
+show dbs 
+
+//see all collections
+show collections
+
+////insert data
+db.collectionname.insert({_id:1,name:'John'})
+
+db.collections.insert([
+    {_id:1,name:'John'},
+    {_id:2,name:'John'}
+    {_id:3,name:'John'}
+
+])
+
+//select/get Data (select * from student)
+db.student.find()  
+
