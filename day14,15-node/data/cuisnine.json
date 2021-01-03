@@ -24,4 +24,4 @@ db.cuisine.insertMany([
       "name": "Street Food",
       "cuisine": 5
     }
-  ])
+])

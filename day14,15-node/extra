@@ -137,3 +137,6 @@ db.collections.insert([
 //select/get Data (select * from student)
 db.student.find()  
 
+//find with condition
+db.restaurent.find({city_name:'Delhi'})
+db.restaurent.find({city:'2'})
