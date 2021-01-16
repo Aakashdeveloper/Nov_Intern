@@ -7,7 +7,7 @@ const mongourl = "mongodb://localhost:27017";
 let db;
 
 //health Check
-app.get('/abc',(req,res) => {
+app.get('/',(req,res) => {
     res.send("Health Ok");
 });
 
@@ -21,10 +21,10 @@ app.get('/city',(req,res) => {
 });
 
 //rest per city
-app.get('/rest/:id/:abc',(req,res) =>{
-  var id = req.params.id
-  var abc = req.params.abc
-  db.collection('restaurent').find({city_name:id}).toArray((err,result) => {
+app.get('/rest/:id',(req,res) =>{
+  var id = req.params.abc
+
+  db.collection('restaurent').find({_id:id}).toArray((err,result) => {
     if(err) throw err;
     res.send(result)
   })

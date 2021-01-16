@@ -140,3 +140,34 @@ db.student.find()
 //find with condition
 db.restaurent.find({city_name:'Delhi'})
 db.restaurent.find({city:'2'})
+
+
+/////////////////////
+get list of city > done
+get list of meal > done
+get restaurent on basis of city
+get restaurent on basis of meal
+get restaurent on basis of meal+cuisine
+get restaurent on basis of meal+cost
+get restaurent details > done
+post restaurent order
+get booking list
+
+
+///////////
+cors
+cross origin resource sharing
+
+npm i cors body-parser
+
+
+/////////////////////////
+db.users.update(
+    {_id:2},
+    {
+        $set:{
+            name:'John',
+            city:'Paris'
+        }
+    }
+)

@@ -27,3 +27,6 @@ nodemon >>>>install global
 > whenever you make any change in code it will restart my application
 
 > npm run dev 
+
+hard delete >delete from database
+soft delete> deactivate
