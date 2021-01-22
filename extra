@@ -30,3 +30,5 @@ nodemon >>>>install global
 
 hard delete >delete from database
 soft delete> deactivate
+
+npm i body-parser cors express jsonwebtoken bcryptjs mongoose
