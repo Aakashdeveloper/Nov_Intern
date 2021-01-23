@@ -145,10 +145,10 @@ db.restaurent.find({city:'2'})
 /////////////////////
 get list of city > done
 get list of meal > done
-get restaurent on basis of city
-get restaurent on basis of meal
-get restaurent on basis of meal+cuisine
-get restaurent on basis of meal+cost
+get restaurent on basis of city > done
+get restaurent on basis of meal > done
+get restaurent on basis of meal+cuisine >done
+get restaurent on basis of meal+cost > done
 get restaurent details > done
 post restaurent order
 get booking list

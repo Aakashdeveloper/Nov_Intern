@@ -1,0 +1,25 @@
+A JavaScript library for building user interfaces
+
+SPA
+single page application
+
+Step to generate react application
+
+///////////////////
+# window
+(one time)
+> open cmd as admin
+> npm i -g create-react-app
+
+(next all time)
+> go inside folder
+> create-react-app appname
+
+# mac
+(one time)
+> open terminal
+> sudo npm i -g create-react-app
+
+(next all time)
+> go inside folder
+> create-react-app appname
