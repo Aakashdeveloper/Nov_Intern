@@ -1,0 +1,50 @@
+A JavaScript library for building user interfaces
+
+SPA
+single page application
+
+Step to generate react application
+
+///////////////////
+# window
+(one time)
+> open cmd as admin
+> npm i -g create-react-app
+
+(next all time)
+> go inside folder
+> create-react-app appname
+
+# mac
+(one time)
+> open terminal
+> sudo npm i -g create-react-app
+
+(next all time)
+> go inside folder
+> create-react-app appname
+
+functional component
+> dumb component
+> mainly use for display Purpose
+> we cannot maintain State
+
+class Component
+> Logical Component
+> use to call api, write logic as well as display
+> we can maintain state
+
+state 
+> act like local variable
+> any data interaction will happen through state
+> we can update the value of state
+> state have scope in same component only
+
+props
+> props help to pass data in between nested component
+> we cannot update the data of props
+
+pass a data from 
+Parent =>  child (props)
+
+npm i react-router-dom
