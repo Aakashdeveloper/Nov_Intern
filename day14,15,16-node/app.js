@@ -78,7 +78,7 @@ app.get('/rest',(req,res) => {
 
 //MealType Route
 app.get('/meal',(req,res) => {
-  db.collection('mealType').find().toArray((err,result) => {
+  db.collection('mealtype').find().toArray((err,result) => {
     if(err) throw err;
     res.send(result)
   })
@@ -108,6 +108,7 @@ app.get('/orders',(req,res) => {
   })
 })
 
+
 //connection with mongo serer
 MongoClient.connect(mongourl,(err,connection) => {
   if(err) console.log(err);
@@ -117,5 +118,4 @@ MongoClient.connect(mongourl,(err,connection) => {
     if(err) throw err;
     console.log(`Server is running on port ${port}`)
   })
-
 })

@@ -48,3 +48,12 @@ pass a data from
 Parent =>  child (props)
 
 npm i react-router-dom
+
+///////
+default props with routing
+////////
+History > for redirection
+location > for query
+match   > for params
+
+List of city => https://eduintern.herokuapp.com/city

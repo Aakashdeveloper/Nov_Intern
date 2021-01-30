@@ -4,7 +4,8 @@ import Home from './Home';
 import NavBar from './Nav';
 import Footer from './Footer';
 import About from './About';
-import Contact from './Contact'
+import Contact from './Contact';
+import AboutDetails from './AboutDetails'
 
 const Routing = () => {
     return(
@@ -12,9 +13,10 @@ const Routing = () => {
         <div>
             <NavBar/>
             <Route exact path="/" component={Home}/>
-            <Route  path="/about" component={About}/>
+            <Route exact path="/about" component={About}/>
+            <Route  path="/about/:topic" component={AboutDetails}/>
             <Route  path="/contact" component={Contact}/>
-            <Footer/>
+            <Footer year="2021"/>
         </div>
     </BrowserRouter>
     )
