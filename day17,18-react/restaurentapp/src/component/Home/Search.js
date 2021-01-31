@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import './Search.css';
 
 const url = "https://eduintern.herokuapp.com/city";
+const rurl = "https://eduintern.herokuapp.com/rest?city="
 
 class Search extends Component{
 
@@ -9,7 +10,8 @@ class Search extends Component{
         super()
 
         this.state={
-            city:''
+            city:'',
+            rest:''
         }
     }
 
@@ -18,10 +20,30 @@ class Search extends Component{
         if(data){
             return data.map((item)=>{
                 return(
-                    <option>{item.name} | {item.city_name}</option>
+                    <option value={item.city}>{item.name} | {item.city_name}</option>
                 )
             })
         }
+    }
+
+    renderRest = (data) => {
+        if(data){
+            return data.map((item) => {
+                return(
+                    <option value={item._id}>{item.name} | {item.locality}</option>
+                )
+            })
+        }
+    }
+
+    handleCity=(event)=>{
+        console.log(event.target.value)
+        const cityId = event.target.value;
+        fetch(`${rurl}${cityId}`,{method:'GET'})
+        .then((res)=> res.json())
+        .then((data) => {
+            this.setState({rest:data})
+        })
     }
 
     render(){
@@ -43,14 +65,12 @@ class Search extends Component{
                         Find Bést Restaurants, Cafés, bars
                     </div>
                     <div className="locationSelector">
-                        <select class="dropdown">
+                        <select class="dropdown" onChange={this.handleCity}>
                             <option>----SELECT CITY----</option>
                             {this.renderCity(this.state.city)}
                         </select> 
                         <select className="dropdown">
-                            <option value="1">Ama Cafe</option>
-                            <option value="2">Village Balcony</option>
-                            <option value="3">Dhaba Sector 17</option>
+                            {this.renderRest(this.state.rest)}
                         </select>
                     </div>
                 </div>

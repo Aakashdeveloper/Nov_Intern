@@ -38,7 +38,7 @@ app.get('/city',(req,res) => {
    
 });
 
-//rest per city
+//rest details
 app.get('/rest/:id',(req,res) =>{
   var id = req.params.id
   db.collection('restaurent').find({_id:id}).toArray((err,result) => {

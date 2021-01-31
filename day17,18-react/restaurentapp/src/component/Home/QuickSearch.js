@@ -1,25 +1,28 @@
 import React from 'react';
 import './QuickSearch.css';
+import {Link} from 'react-router-dom';
 
 const QuickSearch =(props) => {
         const renderList = ({quickData}) => {
             if(quickData){
                 return quickData.map((item) => {
                     return(
-                        <div class="tileContainer">
-                            <div class="tileComponent1">
-                                <img src={`/images/${item.name}.png`} className="imageStyle"/>
-                            </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
-                                    {item.name}
+                        <Link to={`/listing/${item._id}`}>
+                            <div class="tileContainer">
+                                <div class="tileComponent1">
+                                    <img src={`/images/${item.name}.png`} className="imageStyle"/>
                                 </div>
-                                <div class="componentSubHeading">
-                                    Start Your Day with Exclusive {item.name} Options
+                                <div class="tileComponent2">
+                                    <div class="componentHeading">
+                                        {item.name}
+                                    </div>
+                                    <div class="componentSubHeading">
+                                        Start Your Day with Exclusive {item.name} Options
+                                    </div>
                                 </div>
+                            
                             </div>
-                        
-                        </div>
+                        </Link>
                     )
                 })
             }
