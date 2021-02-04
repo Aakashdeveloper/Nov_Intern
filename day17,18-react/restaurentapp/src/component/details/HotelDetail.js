@@ -14,14 +14,16 @@ class Details extends Component{
 
     render(){
         return(
-            <div>Details</div>
+
+            <div>{this.state.details.name}</div>
         )
     }
 
     componentDidMount(){
         const hotelId=this.props.match.params.id
         axios.get(`${url}/${hotelId}`)
-        .then((res) => {console.log(res.data[0])})
+        .then((res) => {this.setState({details:res.json()[0]})})
+        
     }
 }
 

@@ -32,3 +32,9 @@ hard delete >delete from database
 soft delete> deactivate
 
 npm i body-parser cors express jsonwebtoken bcryptjs mongoose
+
+
+npm i cors ejs express request superagent
+
+http://www.passportjs.org/docs/google/
+https://docs.github.com/en/developers/apps/authorizing-oauth-apps

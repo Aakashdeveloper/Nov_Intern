@@ -4,6 +4,7 @@ import JSON from './db.json';
 import NewsDisplay from './NewsDisplay';
 
 class Home extends Component{
+
     constructor(){
         super()
 
@@ -19,6 +20,7 @@ class Home extends Component{
             </React.Fragment>
         )
     }
+    
 }
 
 export default Home;
