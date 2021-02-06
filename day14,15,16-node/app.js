@@ -62,6 +62,7 @@ app.get('/rest',(req,res) => {
     else if(req.query.mealtype && req.query.cuisine){
       condition={$and:[{"type.mealtype":req.query.mealtype},{"Cuisine.cuisine":req.query.cuisine}]}
     }
+   
     //meal
     else if(req.query.mealtype){
       condition={"type.mealtype":req.query.mealtype}

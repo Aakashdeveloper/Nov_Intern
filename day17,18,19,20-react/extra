@@ -46,6 +46,7 @@ props
 
 pass a data from 
 Parent =>  child (props)
+Child =>Parent props with function
 
 npm i react-router-dom
 
@@ -57,3 +58,10 @@ location > for query
 match   > for params
 
 List of city => https://eduintern.herokuapp.com/city
+
+
+function add(a,b){
+    return a+b 
+}
+
+add(1,2)

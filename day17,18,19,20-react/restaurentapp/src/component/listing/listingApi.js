@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import ListingDisplay from './listingDisplay';
-import {Link} from 'react-router-dom';
+import Header from '../../Header';
+import CuisineFilter from '../filters/cuisineFilter';
+import CostFilter from '../filters/CostFilter'
 
 const url = "https://eduintern.herokuapp.com/rest?mealtype=";
 
@@ -13,18 +15,19 @@ class ListingApi extends Component{
             restlist:''
         }
     }
+    setDataPerFilter=(sortedData)=>{
+        this.setState({restlist:sortedData})
+    }
     render(){
         console.log(">>>",this.state.restlist)
         return(
            <div className="row" >
-               <div id="header">
-                    <Link className="logo" to="/">Edureka</Link>
-                    <span className="leftopt" style={{float:'right'}}>Developer Funnel</span>
-                </div>
+                <Header/>
                 <div style={{marginLeft:'5%'}}>
 
                     <div className="col-md-2">
-                        Filter Here
+                        <CuisineFilter restPerCuisine={(data) => {this.setDataPerFilter(data)}}/>
+                        <CostFilter restPerCost={(data) => {this.setDataPerFilter(data)}}/>
                     </div>
                     <div className="col-md-10">
                         <ListingDisplay restaurentList={this.state.restlist}/>
@@ -36,6 +39,7 @@ class ListingApi extends Component{
 
     componentDidMount(){
         var mealid = this.props.match.params.id
+        sessionStorage.setItem('mealId',mealid)
         axios.get(`${url}${mealid}`)
         .then((response) => {this.setState({restlist:response.data})})
     }
