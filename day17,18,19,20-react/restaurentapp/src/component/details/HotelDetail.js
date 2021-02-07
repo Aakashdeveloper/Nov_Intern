@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Header from '../../Header';
+import {Link} from 'react-router-dom';
 
 const url ="https://eduintern.herokuapp.com/rest"
 
@@ -56,6 +57,8 @@ class Details extends Component{
                                 <h3>Phone: 9655868686</h3>
                             </TabPanel>
                         </Tabs>
+                        <Link to="/" className="btn btn-danger">Back</Link> &nbsp;
+                        <Link to={`/booking/${details.name}`} className="btn btn-success">Proceed Order</Link>
                     </div>
                 </div>
             </div>
