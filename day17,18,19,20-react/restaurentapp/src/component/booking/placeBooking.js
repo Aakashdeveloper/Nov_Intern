@@ -9,7 +9,7 @@ class PlaceBooking extends Component{
 
         this.state={
             hotel_name:this.props.match.params.name,
-            name:'',
+            name:sessionStorage.getItem('username'),
             phone:''
         }
     }

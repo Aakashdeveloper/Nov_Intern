@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {withRouter} from 'react-router-dom';
 import './Search.css';
 
 const url = "https://eduintern.herokuapp.com/city";
@@ -6,17 +7,20 @@ const rurl = "https://eduintern.herokuapp.com/rest?city="
 
 class Search extends Component{
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state={
             city:'',
-            rest:''
+            rest:'',
+            username:'',
+            imgurl:''
         }
     }
 
     //Display City in option
     renderCity = (data) => {
+     
         if(data){
             return data.map((item)=>{
                 return(
@@ -46,11 +50,36 @@ class Search extends Component{
         })
     }
 
+    handleRest=(event)=>{
+        this.props.history.push(`/details/${event.target.value}`)
+    }
+    conditionalButton =() =>{
+        console.log(sessionStorage.getItem('username'))
+        console.log(">>>this,state",this.state)
+        if(sessionStorage.getItem('username') == null || sessionStorage.getItem('username') == undefined){
+            return(
+                    <a href='https://github.com/login/oauth/authorize?client_id=c5252063185c8cd11328'>
+                            Login With Github
+                    </a>
+            )
+        }
+        else{
+            return(
+                <>
+                    <img src={this.state.imgurl} style={{height:100,width:100}}/>
+                    Hi {this.state.username}
+                </>
+            )
+            
+        }
+    }
+
     render(){
         return(
             <React.Fragment>
                 <div class="imageContainer">
                     <div style={{textAlign:'right'}}>
+                        {this.conditionalButton()}
                         <a className="fb myfont" href="https://www.facebook.com/" target="_blank">
                             <img src="/images/facebook.png" className="social_logo"/>
                         </a>
@@ -69,7 +98,8 @@ class Search extends Component{
                             <option>----SELECT CITY----</option>
                             {this.renderCity(this.state.city)}
                         </select> 
-                        <select className="dropdown">
+                        <select className="dropdown" onChange={this.handleRest}>
+                            <option>----SELECT Rest----</option>
                             {this.renderRest(this.state.rest)}
                         </select>
                     </div>
@@ -80,11 +110,33 @@ class Search extends Component{
 
     //call api to get data
     componentDidMount(){
-        fetch(url,{method:'GET'})
-        .then((res) => res.json())
-        //setting data in state
-        .then((data)=> this.setState({city:data}))
+        const code = (this.props.location.search).split('=')[1];
+        if(code){
+            let requestData={
+                code:code
+            }
+            console.log("requestData>>>",requestData)
+            fetch('http://localhost:6700/users',{
+                method:'POST',
+                headers:{
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+            .then((res)=>res.json())
+            .then((data) =>{
+                var user = data.login;
+                var img = data.avatar_url
+                sessionStorage.setItem('username',user)
+                fetch(url,{method:'GET'})
+                .then((res) => res.json())
+                .then((data)=> this.setState({city:data,username:user,imgurl:img}))
+            })
+        }
+
+        
     }
 }
 
-export default Search;
+export default withRouter(Search);

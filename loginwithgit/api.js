@@ -14,8 +14,10 @@ app.get('/',(req,res) => {
 });
 
 
-app.get('/users',(req,res) => {
-    const code = req.query.code;
+app.post('/abc',(req,res) => {
+    console.log(">>>>>",req.body)
+    const code = req.body.code;
+    //const code = req.query.code;
     if(!code){
         res.send({
             success:false,
@@ -25,8 +27,8 @@ app.get('/users',(req,res) => {
     superagent
         .post('https://github.com/login/oauth/access_token')
         .send({
-            client_secret:'',
-            client_id:'',
+            client_secret:'13551afb555843b63814821bf8f9ebe41ac35c00',
+            client_id:'c5252063185c8cd11328',
             code:code
         })
         .set('Accept','application/json')
