@@ -3,9 +3,10 @@ import axios from 'axios';
 import ListingDisplay from './listingDisplay';
 import Header from '../../Header';
 import CuisineFilter from '../filters/cuisineFilter';
-import CostFilter from '../filters/CostFilter'
+import CostFilter from '../filters/CostFilter';
+import Sortfilter from '../filters/sortFilter'
 
-const url = "https://eduintern.herokuapp.com/rest?mealtype=";
+const url = "http://localhost:9900/rest?mealtype=";
 
 class ListingApi extends Component{
     constructor(props){
@@ -28,6 +29,7 @@ class ListingApi extends Component{
                     <div className="col-md-2">
                         <CuisineFilter restPerCuisine={(data) => {this.setDataPerFilter(data)}}/>
                         <CostFilter restPerCost={(data) => {this.setDataPerFilter(data)}}/>
+                        <Sortfilter restPerSort={(data) => {this.setDataPerFilter(data)}}/>
                     </div>
                     <div className="col-md-10">
                         <ListingDisplay restaurentList={this.state.restlist}/>

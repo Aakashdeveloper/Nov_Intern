@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import './Search.css';
 
-const url = "https://eduintern.herokuapp.com/city";
-const rurl = "https://eduintern.herokuapp.com/rest?city="
+const url = "http://localhost:9900/city";
+const rurl = "http://localhost:9900/rest?city="
 
 class Search extends Component{
 

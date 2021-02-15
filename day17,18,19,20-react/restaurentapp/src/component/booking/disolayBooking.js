@@ -4,15 +4,19 @@ const BookingView = (props) => {
     const renderTable = ({bookdata}) => {
         if(bookdata){
             return bookdata.map((item) => {
-                return(
-                    <tr>
-                        <td>{item._id}</td>
-                        <td>{item.rest_id}</td>
-                        <td>{item.name}</td>
-                        <td>{item.phone}</td>
-                        <td>{item.address}</td>
-                    </tr>
-                )
+                /*if(useranem==item.name){*/
+                    return(
+                    
+                        <tr>
+                            <td>{item._id}</td>
+                            <td>{item.rest_id}</td>
+                            <td>{item.name}</td>
+                            <td>{item.phone}</td>
+                            <td>{item.address}</td>
+                        </tr>
+                    )    
+                /*}*/
+                
             })
         }
     }

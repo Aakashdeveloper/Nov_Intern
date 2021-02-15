@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import QuickSearch from './QuickSearch';
 
-const url = "https://eduintern.herokuapp.com/meal";
+//const url = "https://eduintern.herokuapp.com/meal";
+const url = "http://localhost:9900/meal"
 
 class QuickApi extends Component{
 

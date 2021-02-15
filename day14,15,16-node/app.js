@@ -50,6 +50,11 @@ app.get('/rest/:id',(req,res) =>{
 //Rest route
 app.get('/rest',(req,res) => {
   var condition ={};
+  let sortcondition = {cost:1};
+  if(req.query.mealtype && req.query.sort){
+    condition={"type.mealtype":req.query.mealtype}
+    sortcondition= {cost:Number(req.query.sort)};
+  }
     //meal +cost
     if(req.query.mealtype && req.query.lcost && req.query.hcost){
       condition={$and:[{"type.mealtype":req.query.mealtype},{cost:{$lt:Number(req.query.hcost),$gt:Number(req.query.lcost)}}]}
@@ -71,7 +76,7 @@ app.get('/rest',(req,res) => {
     else if(req.query.city){
       condition={city:req.query.city}
     }
-  db.collection('restaurent').find(condition).toArray((err,result)=>{
+  db.collection('restaurent').find(condition).sort(sortcondition).toArray((err,result)=>{
     if(err) throw err;
     res.send(result)
   }) 

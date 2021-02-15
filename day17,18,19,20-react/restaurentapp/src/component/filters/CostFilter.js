@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 
-const url = "https://eduintern.herokuapp.com/rest?mealtype="
+const url = "http://localhost:9900/rest?mealtype="
 
 class CostFilter extends Component{
     Costfilter = (event) => {
